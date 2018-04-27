@@ -1,26 +1,18 @@
-window.onload = function() {
+var list = document.getElementById("list");
+var add = document.getElementById("addElem");
 
-	var withButtonItems = document.getElementsByClassName('button');
-	console.log(withButtonItems);
+addElem.addEventListener(addElem, function(e) {});
 
-	//Tab
-	//const tab = [withButtonItems];
-	//var stringWithTab = tab.toString();
-	//console.log(stringWithTab);
+add.addEventListener("click", function() {
+	var element = document.createElement("li");
+	element.innerHTML = "item";
+	var itemsByTagName = document.getElementsByTagName("list");
 
-	//Lenght
-	var ButtonItemsLength = withButtonItems.length;
-	console.log(ButtonItemsLength);
+	console.log(list.length);
+	var addNumber = list.length;
+	var newElem = document.createElement("li");
+	
+	newElem.innerHTML = addNumber;
 
-	for (var j = 0; j < ButtonItemsLength; j++) {
-
-		var lastButton = document.getElementById('last_button'); //new var 
-		var newParagraph = document.createElement('p');
-
-		newParagraph.innerText = withButtonItems;
-
-		lastButton.appendChild(newParagraph);
-		console.log(withButtonItems); 
-	}
-}
-
+	list.appendChild(newElem);
+});
